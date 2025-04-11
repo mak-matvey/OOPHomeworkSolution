@@ -1,16 +1,19 @@
 #include "logic.h"
 
 int main() {
-    Airline Main_Airline;
+    Airline airline1, airline2("Ivan", "Qatavia", "Qatar", 2023, 50, 10000);
 
     cout << "Before: " << endl;
-    cout << Main_Airline.print_FAQ();
+    cout << airline1.print_FAQ();
 
-    rebrand(Main_Airline, "Rusavia");
-    set_new_employee(Main_Airline, 3500);
+    rebrand(airline1, "Rusavia");
+    set_new_employee(airline1, 3500);
 
     cout << "After: " << endl;
-    cout << Main_Airline.print_FAQ();
+    cout << airline1.print_FAQ();
+
+    cout << "Canonical constructor: " << endl;
+    cout << airline2.print_FAQ();
 
     return 0;
 }

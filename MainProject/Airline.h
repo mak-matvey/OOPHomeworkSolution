@@ -14,17 +14,36 @@ public:
     int park_size; // размер авиапарка
     int employee; // кол-во сотрудников
 
+    // constructors
     // default-constructor
     Airline()
     {
         cout << "default-constructor" << endl;
 
-        director = "Alex";
-        name = "Belavia";
-        country = "Belarus";
-        foundation_year = 1996;
-        park_size = 50;
-        employee = 3000;
+        director = "undefined";
+        name = "undefined";
+        country = "undefined";
+        foundation_year = NULL;
+        park_size = NULL;
+        employee = NULL;
+    }
+
+    // canonical-constructor
+    Airline(string dir, string nm, string cntr,
+        int fndt_year, int park_sz, int empl)
+    {
+        director = dir;
+        name = nm;
+        country = cntr;
+        foundation_year = fndt_year;
+        park_size = park_sz;
+        employee = empl;
+    }
+
+    // destructor
+    ~Airline()
+    {
+        cout << "destructor" << endl;
     }
 
     // methods
