@@ -23,10 +23,10 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Airline.h">
+    <ClInclude Include="logic.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="logic.h">
+    <ClInclude Include="Airline.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

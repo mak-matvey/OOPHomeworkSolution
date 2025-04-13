@@ -1,4 +1,4 @@
-#pragma once
+п»ї#pragma once
 #include <string>
 #include <iostream>
 
@@ -7,12 +7,12 @@ using namespace std;
 class Airline
 {
 public:
-    string director; // имя главы авиа-компании
+    string director; // РёРјСЏ РґРёСЂРµРєС‚РѕСЂР°
     string name;
     string country;
     int foundation_year;
-    int park_size; // размер авиапарка
-    int employee; // кол-во сотрудников
+    int park_size; // СЂР°Р·РјРµСЂ Р°РІРёР°-РїР°СЂРєР°
+    int employee; // РєРѕР»-РІРѕ СЃРѕС‚СЂСѓРґРЅРёРєРѕРІ
 
     // constructors
     // default-constructor
@@ -23,9 +23,9 @@ public:
         director = "undefined";
         name = "undefined";
         country = "undefined";
-        foundation_year = NULL;
-        park_size = NULL;
-        employee = NULL;
+        foundation_year = 0;
+        park_size = 0;
+        employee = 0;
     }
 
     // canonical-constructor

@@ -1,7 +1,8 @@
-#include "logic.h"
+﻿#include "logic.h"
 
 int main() {
-    Airline airline1, airline2("Ivan", "Qatavia", "Qatar", 2023, 50, 10000);
+    Airline airline1, airline2
+    ("Ivan", "Qatavia", "Qatar", 2023, 50, 10000);
 
     cout << "Before: " << endl;
     cout << airline1.print_FAQ();
