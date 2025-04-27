@@ -1,20 +1,19 @@
-﻿#include "logic.h"
+﻿#include "Initializer.h"
 
-int main() {
-    Airline airline1, airline2
-    ("Ivan", "Qatavia", "Qatar", 2023, 50, 10000);
+int main(void)
+{
+	Airline* list = nullptr;
+	Initializer initializer;
 
-    cout << "Before: " << endl;
-    cout << airline1.print_FAQ();
+	int count;
 
-    rebrand(airline1, "Rusavia");
-    set_new_employee(airline1, 3500);
+	cout << "Input number of airlines: ";
+	cin >> count;
 
-    cout << "After: " << endl;
-    cout << airline1.print_FAQ();
+	initializer.init(list, count);
 
-    cout << "Canonical constructor: " << endl;
-    cout << airline2.print_FAQ();
-
-    return 0;
+	for (int i = 0; i < count; i++)
+	{
+		cout << list[i].toString() << endl;
+	}
 }

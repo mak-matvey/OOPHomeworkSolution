@@ -7,57 +7,57 @@ using namespace std;
 class Airline
 {
 public:
-    string director; // имя директора
+    string directorName;
     string name;
     string country;
-    int foundation_year;
-    int park_size; // размер авиа-парка
-    int employee; // кол-во сотрудников
+    int foundationYear;
+    int parkSize; // szie of air park
+    int employee; // number of empoloyees
 
     // constructors
+     
     // default-constructor
-    Airline()
-    {
-        cout << "default-constructor" << endl;
-
-        director = "undefined";
-        name = "undefined";
-        country = "undefined";
-        foundation_year = 0;
-        park_size = 0;
-        employee = 0;
-    }
+    Airline() : Airline("undefined", "undefined", "undefined", 1903, NULL, 1)
+    {}
 
     // canonical-constructor
-    Airline(string dir, string nm, string cntr,
-        int fndt_year, int park_sz, int empl)
+    Airline(string directorName, string name, string country,
+        int foundationYear, int parkSize, int employee)
     {
-        director = dir;
-        name = nm;
-        country = cntr;
-        foundation_year = fndt_year;
-        park_size = park_sz;
-        employee = empl;
+        this->directorName = directorName;
+        this->name = name;
+        this->country = country;
+        this->foundationYear = foundationYear;
+        this->parkSize = parkSize;
+        this->employee = employee;
     }
 
     // destructor
     ~Airline()
-    {
-        cout << "destructor" << endl;
-    }
+    {}
 
     // methods
-    string print_FAQ()
+    string toString()
     {
         string s = "Director: ";
 
-        s += director + "\n";
+        s += directorName + "\n";
         s += "Name: " + name + "\n";
         s += "Country: " + country + "\n";
-        s += "Year of foundation: " + to_string(foundation_year) + "\n";
-        s += "Number of airplanes: " + to_string(park_size) + "\n";
+        s += "Year of foundation: " + to_string(foundationYear) + "\n";
+        s += "Number of airplanes: " + to_string(parkSize) + "\n";
         s += "Number of employees: " + to_string(employee) + "\n";
 
         return s;
+    }
+
+    void rebrand(string name)
+    {
+        this->name = name;
+    }
+
+    void set_new_employee(int employee)
+    {
+        this->employee = employee;
     }
 };
