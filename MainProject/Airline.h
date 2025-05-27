@@ -6,7 +6,7 @@ using namespace std;
 
 class Airline
 {
-public:
+private:
     string directorName;
     string name;
     string country;
@@ -14,50 +14,23 @@ public:
     int parkSize; // szie of air park
     int employee; // number of empoloyees
 
-    // constructors
-     
-    // default-constructor
-    Airline() : Airline("undefined", "undefined", "undefined", 1903, NULL, 1)
-    {}
-
-    // canonical-constructor
+public:
+    Airline();
+    Airline(string directorName, string name);
     Airline(string directorName, string name, string country,
-        int foundationYear, int parkSize, int employee)
-    {
-        this->directorName = directorName;
-        this->name = name;
-        this->country = country;
-        this->foundationYear = foundationYear;
-        this->parkSize = parkSize;
-        this->employee = employee;
-    }
+        int foundationYear, int parkSize, int employee);
+    ~Airline();
 
-    // destructor
-    ~Airline()
-    {}
+    string getDirectorName();
+    void setDirectorName(string directorName);
+    string getName();
+    void setName(string name);
+    int getFoundationYear();
+    void setFoundationYear(int foundationYear);
+    int getParkSize();
+    void setParkSize(int parkSize);
+    int getEmployee();
+    void setEmployee(int employee);
 
-    // methods
-    string toString()
-    {
-        string s = "Director: ";
-
-        s += directorName + "\n";
-        s += "Name: " + name + "\n";
-        s += "Country: " + country + "\n";
-        s += "Year of foundation: " + to_string(foundationYear) + "\n";
-        s += "Number of airplanes: " + to_string(parkSize) + "\n";
-        s += "Number of employees: " + to_string(employee) + "\n";
-
-        return s;
-    }
-
-    void rebrand(string name)
-    {
-        this->name = name;
-    }
-
-    void set_new_employee(int employee)
-    {
-        this->employee = employee;
-    }
+    string toString();
 };
